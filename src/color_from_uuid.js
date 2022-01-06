@@ -29,9 +29,9 @@ export function colorFromUuid(uuid, options={}) {
     const encodedUuid = encoder.encode(uuid);
 
     const colorCode = encodedUuid % 0x1000000;
-    const red = (colorCode >> 16) / 256;
-    const green = ((colorCode >> 8) & 0xff) / 256;
-    const blue = (colorCode & 0xff) / 256;
+    const red = colorCode >> 16;
+    const green = (colorCode >> 8) & 0xff;
+    const blue = colorCode & 0xff;
 
     const receivers = {};
     if (options.hasOwnProperty("receivers")) {
