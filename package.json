@@ -2,8 +2,9 @@
   "name": "uuid-color",
   "version": "0.0.1",
   "description": "A lightweight package to generate unique and uniformly sampled colors from UUIDs.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "prepare": "rm -rf lib && NODE_ENV=production babel src --out-file lib/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +24,19 @@
   "bugs": {
     "url": "https://github.com/loucadufault/uuid-color/issues"
   },
-  "homepage": "https://github.com/loucadufault/uuid-color#readme"
+  "homepage": "https://github.com/loucadufault/uuid-color#readme",
+  "peerDependencies": {
+    "@babel/runtime": "^7.16.7",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4"
+  },
+  "dependencies": {
+    "color-convert": "^2.0.1",
+    "uuid-encoder": "^1.2.0"
+  }
 }

@@ -1,0 +1,5 @@
+/src/
+/test/
+/.github/
+.babelrc
+.DS_Store
