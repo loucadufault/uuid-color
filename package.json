@@ -1,0 +1,27 @@
+{
+  "name": "uuid-color",
+  "version": "0.0.1",
+  "description": "A lightweight package to generate unique and uniformly sampled colors from UUIDs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loucadufault/uuid-color.git"
+  },
+  "keywords": [
+    "uuid",
+    "color",
+    "colour",
+    "unique",
+    "hash",
+    "uuid-v4"
+  ],
+  "author": "Louca Dufault",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loucadufault/uuid-color/issues"
+  },
+  "homepage": "https://github.com/loucadufault/uuid-color#readme"
+}
