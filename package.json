@@ -4,8 +4,9 @@
   "description": "A lightweight package to generate unique and uniformly sampled colors from UUIDs.",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "rm -rf lib && NODE_ENV=production babel src --out-file lib/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "rm -rf lib && NODE_ENV=production tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:md": "typedoc --theme markdown && node scripts/prune_internal_docs.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,9 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "typedoc": "^0.22.10",
+    "typedoc-plugin-markdown": "^3.11.9",
+    "typedoc-plugin-missing-exports": "^0.22.6",
     "typescript": "^4.5.4"
   },
   "dependencies": {

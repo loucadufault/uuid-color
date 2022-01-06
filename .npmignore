@@ -1,5 +1,8 @@
 /src/
 /test/
+/docs/
+/scripts/
 /.github/
-.babelrc
+tsconfig.json
+typedoc.json
 .DS_Store

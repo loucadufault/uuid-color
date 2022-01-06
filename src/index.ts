@@ -10,6 +10,8 @@ const DEFAULT_IS_RAW = false;
 const encoder = UuidEncoder("base10");
 
 
+type SupportedColorNotations =  "hex" | "rgb" | "hsl";
+
 type Receivers = {
     hex?: (hexString: string) => void;
     rgb?: (red: number, green: number, blue: number) => void;
@@ -17,12 +19,48 @@ type Receivers = {
 }
 
 export interface Options {
+    /**
+     * Determines whether the generated color components will be rounded.
+     * 
+     * @remarks
+     * Only applies when the specified format is `"hsl"`, as this is the only output format that involves a lossy conversion (from RGB model components).
+     * 
+     * @defaultValue `false`
+     */
     raw?: boolean;
-    format?: "hex" | "rgb" | "hsl";
+
+    /**
+     * Determines the output format of the generated color. 
+     * 
+     * @remarks
+     * Colors are returned as strings in the CSS <color> data type hexadecimal or functional notation corresponding to the specified format.
+     * 
+     * @defaultValue `"hex"`
+     */
+    format?: SupportedColorNotations;
+
+    /**
+     * Attach callbacks to {@link SupportedColorNotations | supported color notations} as keys that will be called with the corresponding generated color components or code. Eliminates the need to parse the returned string if further manipulation is desired.
+     * 
+     * @remarks
+     * Does not affect the return value of {@link colorFromUuid | the `colorFromUuid` function}.
+     * See {@link Receivers | the Receivers type} for more details.
+     */
     receivers?: Receivers;
 }
 
-
+/**
+ * Returns the generated color associated with the given uuid.
+ * 
+ * @param uuid - The uuid for which to generate a color
+ * @param options - An optional object to configure the color generation, and attach callbacks that directly receive the generated color code or components in various formats
+ * @returns The generated color as a CSS <color> notation string
+ * 
+ * @throws {@link Error}
+ * This exception is thrown if the input uuid string is not a valid UUID.
+ * 
+ * @public
+ */
 export function colorFromUuid(uuid: string, options: Options = {}): string {
     if (!isValidUuid(uuid)) {
         throw new Error("Given string is not a valid UUID.");
