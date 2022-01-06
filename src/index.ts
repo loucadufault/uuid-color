@@ -10,18 +10,20 @@ const DEFAULT_IS_RAW = false;
 const encoder = UuidEncoder("base10");
 
 
-// type Options = {
-//     raw?: boolean;
-//     format?: "hex" | "rgb" | "hsl";
-//     receivers?: {
-//         hex?: (hexString: string) => any;
-//         rgb?: (red: number, green: number, blue: number) => any;
-//         hsl?: (hue: number, saturation: number, lightness: number) => any;
-//     }
-// }
+type Receivers = {
+    hex?: (hexString: string) => void;
+    rgb?: (red: number, green: number, blue: number) => void;
+    hsl?: (hue: number, saturation: number, lightness: number) => void;
+}
+
+export interface Options {
+    raw?: boolean;
+    format?: "hex" | "rgb" | "hsl";
+    receivers?: Receivers;
+}
 
 
-export function colorFromUuid(uuid, options={}) {
+export function colorFromUuid(uuid: string, options: Options = {}): string {
     if (!isValidUuid(uuid)) {
         throw new Error("Given string is not a valid UUID.");
     }
@@ -33,11 +35,11 @@ export function colorFromUuid(uuid, options={}) {
     const green = (colorCode >> 8) & 0xff;
     const blue = colorCode & 0xff;
 
-    const receivers = {};
+    const receivers = {} as Receivers;
     if (options.hasOwnProperty("receivers")) {
         ["rgb", "hsl", "hex"].forEach(format => {
             if (options.receivers.hasOwnProperty(format)) {
-                receivers.format = options.receivers.format; // link to callbacks
+                receivers[format] = options.receivers[format]; // link to callbacks
             }
         });
     }
@@ -45,9 +47,9 @@ export function colorFromUuid(uuid, options={}) {
     /*
      By default, return values are rounded. To get the unrounded (raw) results, use the raw: true option
     */
-    const isRaw = DEFAULT_IS_RAW;
-    if (options.hasOwnProperty("raw") && typeof(options.raw) === "boolean") {
-        isRaw = options.raw; // with TS this should be forced to bool
+    let isRaw = DEFAULT_IS_RAW;
+    if (options.hasOwnProperty("raw")) {
+        isRaw = options.raw;
     }
 
     if (!isRaw) {
@@ -58,7 +60,7 @@ export function colorFromUuid(uuid, options={}) {
         receivers.rgb(red, green, blue);
     }
     if ("hsl" in receivers) {
-        receivers.hsl(...convert.rgb.hsl(red, green, blue));
+        receivers.hsl(...convert.rgb.hsl(red, green, blue) as [number, number, number]);
     }
     if ("hex" in receivers) {
         receivers.hex(convert.rgb.hex(red, green, blue).toLowerCase());
