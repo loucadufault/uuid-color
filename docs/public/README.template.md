@@ -7,7 +7,7 @@ Since the color space is only 255^3 whereas the UUID space is much larger ([appr
 # Installation:
 
 ```sh
-npm i uuid-colors
+npm i uuid-color
 ```
 
 # Usage
