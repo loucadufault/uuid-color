@@ -1,6 +1,6 @@
 {
   "name": "uuid-color",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A lightweight package to generate unique and uniformly sampled colors from UUIDs.",
   "main": "lib/index.js",
   "scripts": {
