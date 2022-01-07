@@ -1,4 +1,4 @@
-[Reference - v0.0.5](../README.md) / Options
+[Reference - v0.0.7](../README.md) / Options
 
 # Interface: Options
 
@@ -25,7 +25,7 @@ Colors are returned as strings in the CSS <color> data type hexadecimal or funct
 
 #### Defined in
 
-[index.ts:40](https://github.com/loucadufault/uuid-color/blob/2177a9e/src/index.ts#L40)
+[index.ts:40](https://github.com/loucadufault/uuid-color/blob/f581a67/src/index.ts#L40)
 
 ___
 
@@ -42,7 +42,7 @@ Only applies when the specified format is `"hsl"`, as this is the only output fo
 
 #### Defined in
 
-[index.ts:30](https://github.com/loucadufault/uuid-color/blob/2177a9e/src/index.ts#L30)
+[index.ts:30](https://github.com/loucadufault/uuid-color/blob/f581a67/src/index.ts#L30)
 
 ___
 
@@ -58,4 +58,4 @@ See [the Receivers type](../modules/internal_.md#receivers) for more details.
 
 #### Defined in
 
-[index.ts:49](https://github.com/loucadufault/uuid-color/blob/2177a9e/src/index.ts#L49)
+[index.ts:49](https://github.com/loucadufault/uuid-color/blob/f581a67/src/index.ts#L49)
