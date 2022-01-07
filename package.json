@@ -6,7 +6,7 @@
   "scripts": {
     "prepare": "rm -rf lib && NODE_ENV=production tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:md": "typedoc --theme markdown && node scripts/prune_internal_docs.js"
+    "docs:md": "typedoc --theme markdown && node scripts/edit_docs/index.js && cp ./docs/modules.md ./README.md"
   },
   "repository": {
     "type": "git",
