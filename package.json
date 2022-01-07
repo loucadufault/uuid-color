@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:generate": "typedoc --theme markdown --name \"Reference\" --includeVersion && node scripts/edit_docs/index.js",
     "docs:template": "node scripts/templating_docs/index.js --template docs/public/README.md",
-    "docs:clean": "rm -rf docs/build || rm README.md"
+    "docs:clean": "rm -rf docs/build || rm README.md",
+    "docs": "npm run docs:clean && npm run docs:generate && npm run docs:template"
   },
   "repository": {
     "type": "git",

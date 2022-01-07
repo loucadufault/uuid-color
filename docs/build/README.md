@@ -1,4 +1,4 @@
-# Reference - v0.0.1
+# Reference - v0.0.5
 
 ## Table of contents
 
@@ -36,4 +36,4 @@ The generated color as a CSS `<color>` notation string
 
 #### Defined in
 
-[index.ts:64](https://github.com/loucadufault/uuid-color/blob/30a3faf/src/index.ts#L64)
+[index.ts:64](https://github.com/loucadufault/uuid-color/blob/2177a9e/src/index.ts#L64)

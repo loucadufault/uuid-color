@@ -1,6 +1,6 @@
 import { validate as isValidUuid } from "uuid";
 import * as UuidEncoder from "uuid-encoder";
-import convert from "color-convert";
+import * as convert from "color-convert";
 
 
 const DEFAULT_COLOR_FORMAT = "hex";
