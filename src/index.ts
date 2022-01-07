@@ -20,7 +20,7 @@ type Receivers = {
 
 export interface Options {
     /**
-     * Determines whether the generated color components will be rounded.
+     * Determines whether to skip rounding the generated color components.
      * 
      * @remarks
      * Only applies when the specified format is `"hsl"`, as this is the only output format that involves a lossy conversion (from RGB model components).

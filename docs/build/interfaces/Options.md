@@ -25,7 +25,7 @@ Colors are returned as strings in the CSS <color> data type hexadecimal or funct
 
 #### Defined in
 
-[index.ts:40](https://github.com/loucadufault/uuid-color/blob/79f3e41/src/index.ts#L40)
+[index.ts:40](https://github.com/loucadufault/uuid-color/blob/30a3faf/src/index.ts#L40)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • `Optional` **raw**: `boolean`
 
-Determines whether the generated color components will be rounded.
+Determines whether to skip rounding the generated color components.
 
 **`remarks`**
 Only applies when the specified format is `"hsl"`, as this is the only output format that involves a lossy conversion (from RGB model components).
@@ -42,7 +42,7 @@ Only applies when the specified format is `"hsl"`, as this is the only output fo
 
 #### Defined in
 
-[index.ts:30](https://github.com/loucadufault/uuid-color/blob/79f3e41/src/index.ts#L30)
+[index.ts:30](https://github.com/loucadufault/uuid-color/blob/30a3faf/src/index.ts#L30)
 
 ___
 
@@ -58,4 +58,4 @@ See [the Receivers type](../modules/internal_.md#receivers) for more details.
 
 #### Defined in
 
-[index.ts:49](https://github.com/loucadufault/uuid-color/blob/79f3e41/src/index.ts#L49)
+[index.ts:49](https://github.com/loucadufault/uuid-color/blob/30a3faf/src/index.ts#L49)

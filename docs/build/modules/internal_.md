@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[index.ts:15](https://github.com/loucadufault/uuid-color/blob/79f3e41/src/index.ts#L15)
+[index.ts:15](https://github.com/loucadufault/uuid-color/blob/30a3faf/src/index.ts#L15)
 
 ___
 
@@ -35,4 +35,4 @@ ___
 
 #### Defined in
 
-[index.ts:13](https://github.com/loucadufault/uuid-color/blob/79f3e41/src/index.ts#L13)
+[index.ts:13](https://github.com/loucadufault/uuid-color/blob/30a3faf/src/index.ts#L13)

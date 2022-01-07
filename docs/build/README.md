@@ -36,4 +36,4 @@ The generated color as a CSS `<color>` notation string
 
 #### Defined in
 
-[index.ts:64](https://github.com/loucadufault/uuid-color/blob/79f3e41/src/index.ts#L64)
+[index.ts:64](https://github.com/loucadufault/uuid-color/blob/30a3faf/src/index.ts#L64)
