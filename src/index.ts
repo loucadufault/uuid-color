@@ -66,9 +66,9 @@ export function colorFromUuid(uuid: string, options: Options = {}): string {
         throw new Error("Given string is not a valid UUID.");
     }
 
-    const encodedUuid = encoder.encode(uuid);
+    const encodedUuid = BigInt(encoder.encode(uuid));
 
-    const colorCode = encodedUuid % 0x1000000;
+    const colorCode = Number(encodedUuid % BigInt(0x1000000));
     const red = colorCode >> 16;
     const green = (colorCode >> 8) & 0xff;
     const blue = colorCode & 0xff;
