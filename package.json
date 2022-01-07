@@ -6,7 +6,9 @@
   "scripts": {
     "prepare": "rm -rf lib && NODE_ENV=production tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:md": "typedoc --theme markdown && node scripts/edit_docs/index.js && cp ./docs/modules.md ./README.md"
+    "docs:generate": "typedoc --theme markdown --name \"Reference\" --includeVersion && node scripts/edit_docs/index.js",
+    "docs:template": "node scripts/templating_docs/index.js --template docs/public/README.md",
+    "docs:clean": "rm -rf docs/build || rm README.md"
   },
   "repository": {
     "type": "git",

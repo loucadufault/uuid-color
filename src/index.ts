@@ -54,7 +54,7 @@ export interface Options {
  * 
  * @param uuid - The uuid for which to generate a color
  * @param options - An optional object to configure the color generation, and attach callbacks that directly receive the generated color code or components in various formats
- * @returns The generated color as a CSS <color> notation string
+ * @returns The generated color as a CSS `<color>` notation string
  * 
  * @throws {@link Error}
  * This exception is thrown if the input uuid string is not a valid UUID.

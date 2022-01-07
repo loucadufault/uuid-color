@@ -7,7 +7,7 @@ const typedocOutPath = require("../../typedoc.json").out;
 
 
 const BASE_PATH = typedocOutPath;
-const filename = path.join(".", typedocOutPath, "modules.md");
+const filename = path.join(".", typedocOutPath, "README.md");
 
 
 pruneInternalNamespaceReferences(BASE_PATH, filename);

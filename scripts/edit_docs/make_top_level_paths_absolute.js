@@ -17,15 +17,13 @@ exports.makeTopLevelPathsAbsolute = function(basePath, rootFilename) {
 
   const filename = rootFilename;
 
-  fs.readFile(filename, 'utf8', function(err, data) {
-    if (err) throw err;
+  const data = fs.readFileSync(filename, { encoding: "utf8" });
 
-    const lines = data.split('\n');
+  const lines = data.split('\n');
 
-    const linesWithAbsoluteLocalLinks = lines.map(function (line) {
-      return makeLineLinkPathsAbsolute(line);
-    });
-    
-    fs.writeFile(filename, linesWithAbsoluteLocalLinks.join('\n'), function (err, result) { if (err) throw err });
+  const linesWithAbsoluteLocalLinks = lines.map(function (line) {
+    return makeLineLinkPathsAbsolute(line);
   });
+  
+  fs.writeFileSync(filename, linesWithAbsoluteLocalLinks.join("\n"));
 };

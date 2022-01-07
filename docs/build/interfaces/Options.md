@@ -1,4 +1,4 @@
-[uuid-color](../README.md) / [Exports](../modules.md) / Options
+[Reference - v0.0.1](../README.md) / Options
 
 # Interface: Options
 
@@ -25,7 +25,7 @@ Colors are returned as strings in the CSS <color> data type hexadecimal or funct
 
 #### Defined in
 
-[index.ts:40](https://github.com/loucadufault/uuid-color/blob/4088c61/src/index.ts#L40)
+[index.ts:40](https://github.com/loucadufault/uuid-color/blob/79f3e41/src/index.ts#L40)
 
 ___
 
@@ -42,7 +42,7 @@ Only applies when the specified format is `"hsl"`, as this is the only output fo
 
 #### Defined in
 
-[index.ts:30](https://github.com/loucadufault/uuid-color/blob/4088c61/src/index.ts#L30)
+[index.ts:30](https://github.com/loucadufault/uuid-color/blob/79f3e41/src/index.ts#L30)
 
 ___
 
@@ -53,9 +53,9 @@ ___
 Attach callbacks to [supported color notations](../modules/internal_.md#supportedcolornotations) as keys that will be called with the corresponding generated color components or code. Eliminates the need to parse the returned string if further manipulation is desired.
 
 **`remarks`**
-Does not affect the return value of [the `colorFromUuid` function](../modules.md#colorfromuuid).
+Does not affect the return value of [the `colorFromUuid` function](../README.md#colorfromuuid).
 See [the Receivers type](../modules/internal_.md#receivers) for more details.
 
 #### Defined in
 
-[index.ts:49](https://github.com/loucadufault/uuid-color/blob/4088c61/src/index.ts#L49)
+[index.ts:49](https://github.com/loucadufault/uuid-color/blob/79f3e41/src/index.ts#L49)
