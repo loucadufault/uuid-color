@@ -7,7 +7,7 @@ const DEFAULT_COLOR_FORMAT = "hex";
 const DEFAULT_IS_RAW = false;
 
 
-const encoder = UuidEncoder("base10");
+const encoder = new UuidEncoder("base10");
 
 
 type SupportedColorNotations =  "hex" | "rgb" | "hsl";
