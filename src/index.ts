@@ -1,5 +1,5 @@
 import { validate as isValidUuid } from "uuid";
-import UuidEncoder from "uuid-encoder";
+import * as UuidEncoder from "uuid-encoder";
 import convert from "color-convert";
 
 

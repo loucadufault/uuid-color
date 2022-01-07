@@ -4,6 +4,7 @@
   "description": "A lightweight package to generate unique and uniformly sampled colors from UUIDs.",
   "main": "lib/index.js",
   "scripts": {
+    "build": "tsc",
     "prepare": "rm -rf lib && NODE_ENV=production tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:generate": "typedoc --theme markdown --name \"Reference\" --includeVersion && node scripts/edit_docs/index.js",
