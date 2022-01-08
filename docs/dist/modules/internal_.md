@@ -1,4 +1,4 @@
-[Reference - v0.0.7](../README.md) / <internal\>
+[Reference - v0.1.0](../README.md) / <internal\>
 
 # Namespace: <internal\>
 
@@ -20,12 +20,12 @@
 | Name | Type |
 | :------ | :------ |
 | `hex?` | (`hexString`: `string`) => `void` |
-| `hsl?` | (`hue`: `number`, `saturation`: `number`, `lightness`: `number`) => `void` |
-| `rgb?` | (`red`: `number`, `green`: `number`, `blue`: `number`) => `void` |
+| `hsl?` | (`hue`: `number`, `saturation`: `number`, `lightness`: `number`, `alpha?`: `number`) => `void` |
+| `rgb?` | (`red`: `number`, `green`: `number`, `blue`: `number`, `alpha?`: `number`) => `void` |
 
 #### Defined in
 
-[index.ts:15](https://github.com/loucadufault/uuid-color/blob/f581a67/src/index.ts#L15)
+[index.ts:8](https://github.com/loucadufault/uuid-color/blob/1d2a5c0/src/index.ts#L8)
 
 ___
 
@@ -35,4 +35,4 @@ ___
 
 #### Defined in
 
-[index.ts:13](https://github.com/loucadufault/uuid-color/blob/f581a67/src/index.ts#L13)
+[index.ts:6](https://github.com/loucadufault/uuid-color/blob/1d2a5c0/src/index.ts#L6)

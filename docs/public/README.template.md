@@ -28,4 +28,4 @@ const hexColor = colorFromUuid(myUuid);
 
 [Live demo](https://codesandbox.io/s/uuid-color-usage-o0e4o)
 
-{{/docs/build/README.md}}
+{{/docs/dist/README.md}}

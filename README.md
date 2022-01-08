@@ -28,17 +28,17 @@ const hexColor = colorFromUuid(myUuid);
 
 [Live demo](https://codesandbox.io/s/uuid-color-usage-o0e4o)
 
-# Reference - v0.0.7
+# Reference - v0.1.0
 
 ## Table of contents
 
 ### Interfaces
 
-- [Options](docs/build/interfaces/Options.md)
+- [Options](docs/dist/interfaces/Options.md)
 
 ### Functions
 
-- [colorFromUuid](docs/build/README.md#colorfromuuid)
+- [colorFromUuid](docs/dist/README.md#colorfromuuid)
 
 ## Functions
 
@@ -48,7 +48,7 @@ const hexColor = colorFromUuid(myUuid);
 
 Returns the generated color associated with the given uuid.
 
-**`throws`** {@link Error}
+**`throws`** [Error](https://developer.mozilla.org/en-US/docs/web/javascript/reference/global_objects/error)
 This exception is thrown if the input uuid string is not a valid UUID.
 
 #### Parameters
@@ -56,7 +56,7 @@ This exception is thrown if the input uuid string is not a valid UUID.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `uuid` | `string` | The uuid for which to generate a color |
-| `options` | [`Options`](docs/build/interfaces/Options.md) | An optional object to configure the color generation, and attach callbacks that directly receive the generated color code or components in various formats |
+| `options` | [`Options`](docs/dist/interfaces/Options.md) | An optional object to configure the color generation, and attach callbacks that directly receive the generated color code or components in various formats |
 
 #### Returns
 
@@ -66,4 +66,4 @@ The generated color as a CSS `<color>` notation string
 
 #### Defined in
 
-[index.ts:64](https://github.com/loucadufault/uuid-color/blob/f581a67/src/index.ts#L64)
+[index.ts:81](https://github.com/loucadufault/uuid-color/blob/1d2a5c0/src/index.ts#L81)
