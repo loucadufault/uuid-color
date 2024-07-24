@@ -1,3 +1,5 @@
+**uuid-color package on npm: https://www.npmjs.com/package/uuid-color**
+
 A lightweight package to deterministically generate unique and uniformly sampled colors from UUIDs.
 
 ### How it works
